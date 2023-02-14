@@ -1,0 +1,45 @@
+.subscriptions{
+  padding: 1em;
+  @include from(m){
+    padding: 2em 5%;
+  }
+  @include from(lg){
+    padding: 2em 10%;
+  }
+  &__figure{
+    display: table;
+    width: 80%;
+    max-width: 350px;
+    padding: 2em;
+    background: #fff;
+    border: 1px solid rgba(#ccc,.3);
+    border-radius: 1rem;
+  }
+  figcaption{
+    font-weight: 700;
+    font-size: 1.5em;
+    padding-bottom: 3rem;
+    position: relative;
+    &:before{
+      content: "";
+      position: absolute;
+      width: 80%;
+      height: 1px;
+      background: rgba(#ccc,.3);
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  p{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2em;
+  }
+  .button-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+}

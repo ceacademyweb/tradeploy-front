@@ -1,0 +1,87 @@
+.modal-res{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(#000,.9);
+  top:0;
+  left: 0;
+  z-index: 20000;
+  &__container{
+    background-color: #fff;
+    padding: 3em;
+    text-align: center;
+    font-size: 1.1em;
+    border-radius: .5rem;
+    img{
+      width: 60%;
+      max-width: 200px;
+      margin: 0 auto 2em;
+
+    }
+    a{
+
+    }
+  }
+}
+.modalForm{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(#000,.75);
+  z-index: 20000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__content{
+    position: relative;
+    background-color: #fff;
+    padding: 3em;
+    font-size: 1.1em;
+    border-radius: .5rem;
+    width: 80%;
+    max-width: 600px;
+    text-align: left;
+  }
+  &__close{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    width: 1em;
+    height: 1em;
+    font-size: 1.5em;
+    cursor: pointer;
+    &::after, &::before {
+      content: "";
+      width: 1px;
+      height: 100%;
+      background-color: #000;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform-origin: center;
+      transform: translateX(-50%) rotate(45deg);
+    }
+    &::after{
+      transform: translateX(-50%) rotate(-45deg);
+    }
+  }
+  .form-group{
+    margin-bottom: 1em;
+    label{
+      display: block;
+      margin-bottom: .5em;
+    }
+    input{
+      width: 100%;
+      padding: .5em;
+      border: 1px solid #ccc;
+      border-radius: .5rem;
+      line-height: 1.8;
+    }
+  }
+}
