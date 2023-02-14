@@ -1,4 +1,5 @@
 import {useUserStore} from "../../store/User";
+import {API_LINK} from "../../helpers/api";
 
 const modalElement = `
   <div class="modalForm__content">
@@ -29,7 +30,7 @@ const sendForm = (form:any)=>{
   button.innerHTML = "Procesando..."
   const data = new FormData(form)
   const dataObj = Object.fromEntries(data.entries())
-  fetch("http://localhost:5000/create-payment",{
+  fetch(`${API_LINK}/create-payment`,{
     method: "POST",
     headers: {
       "Content-Type": "application/json"

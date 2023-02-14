@@ -1,17 +1,18 @@
 import {useUserStore} from "../../store/User";
 import {useNavigate} from "react-router-dom";
 import {set} from "video.js/dist/types/tech/middleware";
+import {API_LINK} from "../../helpers/api";
 
 const Login = () => {
   const nav = useNavigate()
   const {setUser} = useUserStore()
-
+  API_LINK
   const handledSubmit = (e:any)=>{
     e.preventDefault()
     const data = new FormData(e.target)
     const dataObj = Object.fromEntries(data.entries())
     console.log(dataObj)
-    fetch("https://ceacademy-auth-production.up.railway.app/login",{
+    fetch(`${API_LINK}/login`,{
       method: "POST",
       headers: {
         "Content-Type": "application/json"

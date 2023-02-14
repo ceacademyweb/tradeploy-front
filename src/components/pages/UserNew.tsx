@@ -4,13 +4,14 @@ import axios from "axios";
 import videojs from "video.js";
 import any = videojs.any;
 import dayjs from "dayjs";
+import {API_LINK} from "../../helpers/api";
 
 const userNew =  () => {
   const {id} = useParams();
   const [user, setUser] = useState<any>([]);
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/user/${id}`)
+    axios.get(`${API_LINK}/user/${id}`)
       .then(res => {setUser(res.data)})
   },[])
   const vincular = (e:any) => {
