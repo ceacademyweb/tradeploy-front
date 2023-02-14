@@ -19,7 +19,7 @@ const modalElement = `
       </div>
       <div class="form-group">
         <label for="telegram">Telegram</label>
-        <input required type="text" name="telegram" id="telegram" value="git stat"/>    
+        <input required type="text" name="telegram" id="telegram" value=""/>    
       </div>  
       <button type="submit" class="btn btn-dark">Pagar</button>
     </form>
