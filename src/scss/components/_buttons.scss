@@ -83,3 +83,13 @@
   border: none;
   opacity: .2;
 }
+.btn-paypal, .btn-paypal-modal{
+  border: none;
+  padding: 0;
+  background: transparent;
+}
+.btn-paypal-modal{
+    max-width: 250px;
+    display: inline-block;
+    margin: 0 auto;
+}

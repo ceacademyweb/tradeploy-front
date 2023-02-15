@@ -1,6 +1,6 @@
 import {useUserStore} from "../../store/User";
 import {API_LINK} from "../../helpers/api";
-console.log(API_LINK)
+
 const modalElement = `
   <div class="modalForm__content">
     <div class="modalForm__close"></div>
@@ -10,6 +10,10 @@ const modalElement = `
         <input required type="text" name="name" id="name" value=""/>
       </div>
       <div class="form-group">
+        <label for="surname">Apellido</label>
+        <input required type="text" name="surname" id="surname" value=""/>
+      </div>
+      <div class="form-group">
         <label for="email">Email</label>
         <input required type="email" name="email" id="email" value=""/>
       </div>
@@ -17,33 +21,19 @@ const modalElement = `
         <label for="telegram">Telegram</label>
         <input required type="text" name="telegram" id="telegram" value=""/>
       </div>
-      <button class='btn-paypal-modal' type="submit"><img src="/img/paypal-btn.png"/></button>
+      <button className={'btn-modal-paypal'} type="submit"><img src="/img/paypal-btn.png" alt=""/></button>
     </form>
   </div>
 `
-const sendForm = (form:any)=>{
-  console.log(form);
-  const button = form.querySelector("button")
-  button.innerHTML = "Procesando..."
-  const data = new FormData(form)
-  const dataObj = Object.fromEntries(data.entries())
-  fetch(`${API_LINK}/create-payment`,{
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(dataObj)
-  })
-    .then(res=>res.json())
-    .then(res=>{
-      console.log(res)
-      window.location.href = res.links[1].href
-    })
-}
-const Subscriptions = () => {
 
-  const {user} = useUserStore()
+const sendForm = (form:HTMLElement)=>{
+  console.log(form);
+}
+
+
+const Subscriptions = () => {
   const handledModal = (e:any)=>{
+    e.preventDefault();
     const modal = document.createElement("div")
     modal.classList.add("modalForm")
     modal.innerHTML = modalElement
@@ -53,10 +43,6 @@ const Subscriptions = () => {
       e.preventDefault()
       sendForm(e.target)
     })
-    const close:any = modal.querySelector(".modalForm__close")
-    close.addEventListener('click', ()=>{
-      modal.remove()
-    })
   }
   return(
     <section className="section center subscriptions">
@@ -64,11 +50,10 @@ const Subscriptions = () => {
         <figcaption>Suscripción a TRADEPLOY</figcaption>
         <p>Suscripción mensual: <span>USD $200.00</span></p>
         <div className="button-container">
-          <button className={'btn-paypal'} type="button" onClick={handledModal}><img src="/img/paypal-btn.png"/></button>
+          <button className={'btn paypal'} type="button" onClick={handledModal}><img src="/img/paypal-btn.png" alt=""/></button>
         </div>
       </figure>
     </section>
-
   )
 }
 
