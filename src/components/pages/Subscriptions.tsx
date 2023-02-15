@@ -1,6 +1,6 @@
 import {useUserStore} from "../../store/User";
 import {API_LINK} from "../../helpers/api";
-console.log(API_LINK)
+
 const modalElement = `
   <div class="modalForm__content">
     <div class="modalForm__close"></div>
@@ -22,11 +22,11 @@ const modalElement = `
   </div>
 `
 const sendForm = (form:any)=>{
-  console.log(form);
   const button = form.querySelector("button")
   button.innerHTML = "Procesando..."
   const data = new FormData(form)
   const dataObj = Object.fromEntries(data.entries())
+  console.log(API_LINK)
   fetch(`${API_LINK}/create-payment`,{
     method: "POST",
     headers: {
