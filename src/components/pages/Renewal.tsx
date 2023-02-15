@@ -22,9 +22,9 @@ const Renewal =  () => {
         user.length > 0 && user[0].subscribed ?
         user.map((us:any) =>{
           return (
-            <div key={us._id}>
-              <h2>Gracias {us.name} por renovar tu suscripcion a TRADEPLOY</h2>
-              <p>Suscripcion Valida hasta {dayjs(us.subscribedUntil).format('DD/MM/YYYY')}</p>
+            <div key={us._id} className={'center child'}>
+              <h2>Gracias {us.name} por renovar tu suscripción a TRADEPLOY</h2>
+              <p>Suscripción Valida hasta {dayjs(us.subscribedUntil).format('DD/MM/YYYY')}</p>
               <a href="http://localhost:5000/vincular" onClick={vincular} className={'btn btn-dark'}>Vicular Telegram</a>
             </div>
           )

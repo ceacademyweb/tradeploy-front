@@ -67,7 +67,11 @@
       background-color: var(--blue);
     }
   }
-
+  &.paypal{
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
   &-small {
     font-size: .6em;
     line-height: 2.5em;

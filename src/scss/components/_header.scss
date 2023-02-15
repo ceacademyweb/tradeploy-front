@@ -11,7 +11,7 @@
   align-items: center;
   padding: 0 1em;
   @include from(lg) {
-    justify-content: space-between;
+    justify-content: flex-start;
     column-gap: 1em;
     padding: 0 7%;
   }
@@ -100,4 +100,7 @@
   i{
     margin-left: .5em;
   }
+}
+.btn-subscribe{
+  margin-left: auto;
 }

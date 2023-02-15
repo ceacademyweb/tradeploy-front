@@ -61,12 +61,12 @@ const Subscriptions = () => {
     })
   }
   return(
-    <section className="subscriptions">
+    <section className="section center subscriptions">
       <figure className={'subscriptions__figure'} >
-        <figcaption>Subscripcion a TRADEPLOY</figcaption>
-        <p>Suscripción mensual: <span>USD $20.00</span></p>
+        <figcaption>Subscripción a TRADEPLOY</figcaption>
+        <p>Suscripción mensual: <span>USD $200.00</span></p>
         <div className="button-container">
-          <button className={'btn btn-dark'} type="submit" onClick={handledModal}>Pagar con PayPal</button>
+          <button className={'btn paypal'} type="submit" onClick={handledModal}><img src="/img/paypal-btn.png" alt=""/></button>
         </div>
       </figure>
     </section>
