@@ -78,3 +78,19 @@ section:target{
     min-height: unset;
   }
 }
+.subscriptions__figure{
+  width: 100% !important;
+  figcaption{
+    font-size: 1.2em !important;
+    text-align: center !important;
+    @include from(l) {
+      font-size: 1.5em !important;
+    }
+  }
+  p{
+    font-size: 1em !important;
+    @include from(l) {
+      font-size: 1.2em !important;
+    }
+  }
+}

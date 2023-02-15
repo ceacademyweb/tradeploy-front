@@ -21,7 +21,7 @@ const modalElement = `
         <label for="telegram">Telegram</label>
         <input required type="text" name="telegram" id="telegram" value=""/>    
       </div>  
-      <button type="submit" class="btn btn-dark">Pagar</button>
+      <button className={'btn-modal-paypal'} type="submit" onClick={handledModal}><img src="/img/paypal-btn.png" alt=""/></button>
     </form>
   </div>
 `
@@ -63,7 +63,7 @@ const Subscriptions = () => {
   return(
     <section className="section center subscriptions">
       <figure className={'subscriptions__figure'} >
-        <figcaption>Subscripción a TRADEPLOY</figcaption>
+        <figcaption>Suscripción a TRADEPLOY</figcaption>
         <p>Suscripción mensual: <span>USD $200.00</span></p>
         <div className="button-container">
           <button className={'btn paypal'} type="submit" onClick={handledModal}><img src="/img/paypal-btn.png" alt=""/></button>

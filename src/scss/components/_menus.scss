@@ -15,12 +15,12 @@
   }
   @include from(lg){
     max-height: unset;
-    background: #2ecc54;
+
     position: static;
     display: flex;
     column-gap: .5em;
     padding: 0;
-    //background-color: transparent;
+    background-color: transparent;
     color: var(--color-main);
   }
   &__item{

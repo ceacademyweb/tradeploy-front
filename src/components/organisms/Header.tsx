@@ -1,18 +1,18 @@
 // @ts-nocheck
 // import {Link} from "react-router-dom";
 // import {useUserStore} from "../../store/userStore";
-// import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 // import {useUserStore} from "../../store/User";
 
 import {Link} from "react-router-dom";
 import Menu from "../molecules/Menu";
+import Hamburger from "../molecules/Hamburguer";
 
 const Header = ({subscription}) => {
-  // const [user, setUser] = useState(null);
-  // const {user,setUser} = useUserStore()
-  // useEffect(() => {
-  //   console.log(user)
-  // }, []);
+  const [active, setActive] = useState(false);
+  const ToggleMenuFunction = () => {
+    !active ? setActive(true) : setActive(false);
+  };
   return (
     <header className={'main-header'}>
       <div className="main-logo">
@@ -21,7 +21,8 @@ const Header = ({subscription}) => {
         </Link>
       </div>
       <nav className="main-nav">
-        <Menu/>
+        <Hamburger  active={active} action={ToggleMenuFunction}/>
+        <Menu active={active} action={ToggleMenuFunction} />
       </nav>
       {
         !subscription ? (
