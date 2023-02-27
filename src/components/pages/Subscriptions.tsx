@@ -62,7 +62,7 @@ const Subscriptions = () => {
     <section className="section center subscriptions">
       <figure className={'subscriptions__figure'} >
         <figcaption>Suscripción a TRADEPLOY</figcaption>
-        <p>Suscripción mensual: <span>USD $100.00</span></p>
+        <p>Suscripción mensual: <span>USD $150.00</span></p>
         <div className="button-container">
           <button className={'btn-paypal'} type="button" onClick={handledModal}><img src="/img/paypal-btn.png"/></button>
         </div>
