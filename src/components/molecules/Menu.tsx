@@ -11,11 +11,21 @@ const Menu = ({ active, action }) => {
   return(
     <ul className={`main-menu ${active ? 'is-active' : ''}`}>
       {
+
         menu.map((item, index) => (
+
+
           <li className={'main-menu__item'} key={index}>
-            <NavLink onClick={clickMenu} to={item.path} className={'main-menu__link'} key={index}>
-              {item.title}
-            </NavLink>
+            {
+              item.path? (
+                <NavLink onClick={clickMenu} to={item.path} className={'main-menu__link'} key={index}>
+                  {item.title}
+                </NavLink>
+              )
+              : (
+                  <a href={item.link}>{item.title}</a>
+                )
+            }
 
           </li>
         ))

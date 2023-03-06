@@ -14,5 +14,9 @@ export const menu = [
   {
     title: 'Soporte',
     path: '/soporte'
+  },
+  {
+    title: 'Lift-Off',
+    link: 'https://lift-off.ceacademy.world'
   }
 ]
