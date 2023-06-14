@@ -61,6 +61,9 @@ p{
       margin-bottom: get-vw(40px);
     }
   }
+  p{
+    font-size: 1.3em;
+  }
   .question{
     font-weight: bold;
     margin-top: 1em;
@@ -161,8 +164,9 @@ p{
   p{
     margin-bottom: 30px;
     text-align: center;
+    font-size: 1.2em;
     @include from(l){
-      text-align: left;
+      // text-align: left;
     }
   }
   a, img{
@@ -186,7 +190,7 @@ p{
   }
   position: relative;
   &::before{
-    content: 'click aquí';
+    content: '¡Únete!';
     display: inline-block;
     width: 5em;
     text-align: center;
