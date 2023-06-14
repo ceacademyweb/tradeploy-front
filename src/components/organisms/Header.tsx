@@ -16,7 +16,7 @@ const Header = ({subscription}) => {
   return (
     <header className={'main-header'}>
       <div className="main-logo">
-        <Link to={'/'}>
+        <Link to={'/'} className="logo">
           <img src="/img/logo.svg" alt="Logo Tradeploy"/>
         </Link>
       </div>
