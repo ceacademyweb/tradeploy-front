@@ -9,7 +9,7 @@ const Suscibete = () => {
           <p>Suscribete a nuestro canal de Telegram gratuito y comienza a aprender a no perder dinero</p>
         </div>
         <div className="imagen">
-          <a href="https://t.me/tradeploycompublic" target="_blank">
+          <a href="https://t.me/tradeploycompublic" target="_blank" className="telegram-btn">
             <img src="/telegram.svg" alt="" />
           </a>
         </div>
