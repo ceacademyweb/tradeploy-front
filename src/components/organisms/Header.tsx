@@ -29,7 +29,7 @@ const Header = ({subscription}) => {
           // <Link to={'/suscripcion'} className={'btn btn-dark btn-subscribe'}>
           //   Suscribirse
           // </Link>
-          <a href="https://t.me/tradeploycompublic" target="_blank" className={'btn btn-dark btn-subscribe'}>
+          <a href="https://t.me/tradeploy" target="_blank" className={'btn btn-dark btn-subscribe'}>
             Aprende Gratis
           </a>
         ) : null
